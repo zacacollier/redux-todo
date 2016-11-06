@@ -10,8 +10,9 @@ const ToDoList = ({ todos, onToDoClick }) => (
                    onClick={() => onToDoClick(todo.id)}
          />
                   )} 
-</ul>
-    )
+    </ul>
+)
+      
 
 ToDoList.propTypes = {
     todos: PropTypes.arrayOf(PropTypes.shape({

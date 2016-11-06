@@ -29,7 +29,7 @@ const mapDispatchToProps = (dispatch) => {
 
 const VisibleToDoList = connect(
     mapStateToProps,
-    mapDispatchToProps,
+    mapDispatchToProps
 )(ToDoList)
 
 export default VisibleToDoList
