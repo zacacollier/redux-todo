@@ -7,6 +7,7 @@ const Link = ({ active, children, onClick }) => {
     return (
             <a href="#"
         onClick={e => {
+            console.log("workee")
             e.preventDefault()
             onClick()
         }}

@@ -14,14 +14,19 @@ const getVisibleToDos = (todos, filter) => {
         throw new Error(`Unknown filter: ${filter}`)
     }
 }
-
-const mapStateToProps = (state) => ({
+const mapStateToProps = (state) => {
+    return {
         todos: getVisibleToDos(state.todos, state.visibilityFilter)
-})
+    }
+}
 
-const mapDispatchToProps = (dispatch) => ({
-        onToDoClick: toggleToDo
-})
+const mapDispatchToProps = (dispatch) => {
+    return {
+        onToDoClick: (id) => {
+            dispatch(toggleToDo(id))
+        }
+    }
+}
 
 const VisibleToDoList = connect(
     mapStateToProps,
